@@ -1,0 +1,24 @@
+syntax="proto2";
+
+package tejas.cloud.assignment1.proto;
+
+option java_package = "tejas.cloud.assignment1.proto";
+option java_outer_classname = "ProductsProtoc";
+
+message GetProduct{
+    required int32 requestID = 1;
+    required int32 accountID = 2;
+    required int32 productNumber = 3;
+    required string productCategory = 4;
+    required int32 quantity = 5;
+}
+
+message ProductSuccess{
+	required int32 unitPrice = 2;
+	required int32 priceValidationPeriod = 3;
+}
+
+message ProductError {
+	required bool error = 1;
+	required string errorMessage = 2;
+}
